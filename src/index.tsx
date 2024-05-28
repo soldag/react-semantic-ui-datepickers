@@ -216,8 +216,8 @@ class SemanticDatepicker extends React.Component<
   mousedownCb = (mousedownEvent) => {
     const { isVisible } = this.state;
 
-    if (isVisible && this.el) {
-      if (this.el.current && !this.el.current.contains(mousedownEvent.target)) {
+    if (isVisible && this.el && this.el.) {
+      if (this.el.current && !this.el.current.contains(mousedownEvent.composedPath()[0])) {
         this.close();
       }
     }
